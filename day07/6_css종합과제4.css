@@ -7,29 +7,29 @@ li{ list-style-type: none; }
 
 /* 헤더 상단 메뉴 */    
 
-#header > #upmenu{
+#upmenu{
     display: flex; justify-content: flex-end;
     border-bottom: 1px solid #dbdbdb;
     padding: 0px 50px;
 }
-#header > #upmenu .coupon{
+#upmenu .coupon{
     font-weight: bold; background-color: #f5ff6b;
     /* margin-right: 20px; */
 }
-#header > #upmenu .coupon a{
+#upmenu .coupon a{
     font-size: 14px;
 }
-#header > #upmenu li{
+#upmenu li{
     padding: 10px 0px;
 }
-#header > #upmenu li a{
+#upmenu li a{
     font-size: 12px;
     padding: 18px 0px;
 }
-#header > #upmenu li span{
+#upmenu li span{
     padding: 0px 20px; font-size: 14px;
 }
-#header > #upmenu .menuico{
+#upmenu .menuico{
     padding-top: 13px;
 }
 /* 헤더 상단 메뉴 끝 */
@@ -40,11 +40,14 @@ li{ list-style-type: none; }
     align-items: center; padding: 0px 50px;
 }
 #mainmenu ul{
-    width: 80%; display: flex;
+    width: 80%; display: flex; justify-content: flex-start;
 }
 #downmenu li{
     height: 80px; width: 80px;
     display: flex; align-items: center; justify-content: center;
+}
+#downmenu li a{
+    font-size: 12px;
 }
 
 #search{ 
@@ -73,7 +76,7 @@ li{ list-style-type: none; }
     text-align: center; 
     display: none;
 }
-#mainmenu .submenu > li{  margin: 10px; }
+#mainmenu .submenu > li{  margin: 10px; font-size: 12px;}
 #mainmenu > ul > li:hover .submenu{ display: block; }
 #downmenu li a .bfday{ color: red; font-weight: bold; }
 #downmenu .style{ font-weight: bold; }
