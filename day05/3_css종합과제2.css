@@ -1,0 +1,165 @@
+*{
+    margin: 0px; padding: 0px;
+    box-sizing: border-box;
+}
+#wrap{ width: 768px; margin: 0 auto; }
+a{ text-decoration: none; color: black; font-weight: bold; }
+input{ color: white; background-color: black; }
+li{ list-style-type: none;
+    text-align: center;
+}
+
+body{
+    background-color: #f6f6f6;
+}
+#header{
+    padding-top: 30px;
+    display: flex; background-color: red;
+    justify-content: space-between;
+    align-items: center;
+}
+#header span{
+    background-color: black; color: white;
+    padding: 0px 10px 5px;
+    margin: 0px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 24px;
+}
+#header ul li{
+    display: inline-block;
+}
+#header ul li.click{
+    background-color: white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+#header ul li.click a{
+    color: black;
+}
+#header ul li a{
+    font-size: 20px; color: white;
+    padding: 10px 20px; display: block;
+}
+
+#list #menu{
+    display: flex; margin: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#list #menu li{
+    width: 175px; margin-bottom: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+    border-radius: 20px;
+}
+#list #menu li.check{
+    border: 3px solid red;
+}
+#list #menu li a{
+    display: block;
+}
+#list #menu li a img{
+    display: block; width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+#list #menu li a p{
+    margin-bottom: 5px;
+}
+#list #menu li a span{
+    color: red;
+    display: block;
+}
+
+#pay{
+    margin: 0px 20px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+#pay #pay_L{
+    background-color: white;
+    width: 65%;
+}
+#pay #pay_L ul li{
+    font-size: 16px; font-weight: bold;  display: flex;
+    justify-content: space-between; margin: 10px 20px 10px 20px;
+}
+#pay #pay_L ul li.ice{
+    margin-top: 20px;
+}
+#pay #pay_L ul li input{
+    border-radius: 5px;
+    width: 23px; height: 25px;
+    border: 0; font-size: 18px;
+}
+#pay #pay_L ul li input.btn{
+    background-color: #ffb10b;
+}
+
+
+#pay #pay_R{
+    width: 30%;
+}
+#pay #pay_R #tpay{
+    display: flex; justify-content: space-between;
+}
+#pay #pay_R #tpay #tpay_L{
+    display: flex; flex-wrap: wrap;
+    align-items: center;
+}
+#pay #pay_R #tpay #tpay_L p{
+    font-size: 25px; font-weight: bold;
+    letter-spacing: -2px;
+}
+#pay #pay_R #tpay #tpay_L .minute{
+    font-size: 50px; font-weight: bold; color: red;
+    letter-spacing: 2px; margin-right: 5px;
+}
+#pay #pay_R #tpay #tpay_L .second{
+    margin-top: 15px;
+}
+#pay #pay_R #tpay #tpay_R{
+    width: 60%; margin: auto 0;
+}
+#pay #pay_R #tpay #tpay_R a{
+    font-size: 20px; background-color: black; color: white;
+    display: block; padding: 15px; border-radius: 50px;
+    text-align: center;
+}
+#pay #pay_R #bpay .bpay_U{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+}
+#pay #pay_R #bpay .bpay_U p{
+    font-weight: bold; font-size: 20px;
+}
+#pay #pay_R #bpay .bpay_U p b{
+    color: red;  margin-right: 5px;
+}
+#pay #pay_R #bpay .bpay_D{
+    background-color: #ee3219;
+    border-radius: 10px;
+}
+#pay #pay_R #bpay .bpay_D a{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+#pay #pay_R #bpay .bpay_D a span.card{
+    margin-right: 10px;
+    width: 50px; height: 50px;
+    background-color: #da2c15;
+    text-align: center;
+    border-radius: 50px;
+}
+#pay #pay_R #bpay .bpay_D a span img{
+    width: 30px; margin-top: 10px;
+    
+}
+#pay #pay_R #bpay .bpay_D a span{
+    font-size: 25px; color: white;
+    display: inline-block;
+}

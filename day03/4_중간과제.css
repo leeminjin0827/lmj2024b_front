@@ -1,0 +1,23 @@
+body > p{
+    margin: 0px;
+}
+p > img{
+    width: 300px;
+}
+#text p b{
+    font-size: 34px; color: orange; margin-right: 5px;
+}
+div .subject{
+    font-weight: 900;
+}
+#text2{
+    background-color: teal; 
+    padding: 20px;
+    width: 450px;
+}
+#text2 p{
+    font-size: 16px; margin: 0; color: white;
+}
+#text2 p b{
+    font-weight: 400; color: orange;
+}

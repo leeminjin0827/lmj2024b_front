@@ -1,0 +1,219 @@
+*{
+    padding: 0px; margin: 0px;
+    box-sizing: border-box;
+}
+a{ text-decoration: none; color: black; }
+li{ list-style-type: none; }
+
+/* 헤더 상단 메뉴 */    
+
+#upmenu{
+    display: flex; justify-content: flex-end;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 0px 50px;
+}
+#upmenu .coupon{
+    font-weight: bold; background-color: #f5ff6b;
+    /* margin-right: 20px; */
+}
+#upmenu .coupon a{
+    font-size: 14px;
+}
+#upmenu li{
+    padding: 10px 0px;
+}
+#upmenu li a{
+    font-size: 12px;
+    padding: 18px 0px;
+}
+#upmenu li span{
+    padding: 0px 20px; font-size: 14px;
+}
+#upmenu .menuico{
+    padding-top: 13px;
+}
+/* 헤더 상단 메뉴 끝 */
+
+/* 메인 메뉴 */
+#mainmenu{
+    display: flex; justify-content: space-between; 
+    align-items: center; padding: 0px 50px;
+}
+#mainmenu ul{
+    width: 80%; display: flex; justify-content: flex-start;
+}
+#downmenu li{
+    height: 80px; width: 80px;
+    display: flex; align-items: center; justify-content: center;
+}
+#downmenu li a{
+    font-size: 12px;
+}
+
+#search{ 
+    border-bottom: 1px solid black; 
+}
+#search > img{
+    width: 20px; margin-right: 10px;
+}
+#search > input{
+    border: none; padding: 5px; width: 150px; 
+}
+
+#mainmenu #logo{
+    width: 200px;
+}
+#mainmenu .new{
+    color: red;
+}
+
+#mainmenu > ul > li{
+    position: relative;
+}
+#mainmenu .submenu{
+    position: absolute; top: 80px;
+    background-color: white; width: 130%;
+    text-align: center; 
+    display: none;
+}
+#mainmenu .submenu > li{  margin: 10px; font-size: 12px;}
+#mainmenu > ul > li:hover .submenu{ display: block; }
+#downmenu li a .bfday{ color: red; font-weight: bold; }
+#downmenu .style{ font-weight: bold; }
+
+/* 메인 메뉴 화면 고정 */
+#mainmenu{
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    opacity: 80%; z-index: 3;
+}
+/* 메인 메뉴 화면 고정 */
+#mainbg{
+    margin-bottom:250px;
+}
+#mainbg a img{
+    width: 100%;
+}
+/* 메인 메뉴 끝 */
+
+/* 장점 배너 */
+#merit{
+    width: 1420px; margin: 0 auto; margin-bottom:250px;
+}
+#merit > div{
+    display: flex; justify-content: space-between;
+}
+/* 장점 배너 끝 */
+
+/* 인기 제품 배너 */
+#bestitem{
+    width: 1420px; margin: 0 auto 250px;
+    
+}
+#bestitem > h3{
+    text-align: center; color: #1c1c1c;
+    margin-bottom: 20px;
+}
+#bestitem > p {
+    text-align: center; color: #bfbfbf;
+    margin-bottom: 30px;
+}
+#bitems{
+    display: flex; justify-content: space-between;
+    padding-bottom: 100px;
+    border-bottom: 2px solid skyblue;
+}
+#bitems li{
+    position: relative;
+}
+#bitems li a img{
+    display: block;
+    width: 340px;
+}
+#bitems li .best{
+    position: absolute; top: 0px; right: 0;
+    text-align: center; padding: 5px;
+    background-color: black;
+    color: white; opacity: 70%;
+    font-weight: bold;
+}
+#bitems .color > span{
+    width: 10px; height: 10px;
+    display: inline-block;
+    border: 1px solid #BDBDBD;
+}
+#bitems .review{
+    position: absolute; right: 0;
+    font-size: 14px; color: #a3a3a3;
+}
+#bitems .name{
+    margin-top: 7px; font-size: 12px; font-weight: bold;
+}
+#bitems .size{
+    font-size:  12px; color: #a3a3a3;
+}
+#bitems .bigsize{
+    font-weight: bold; color: red;
+    margin: 5px 0px;
+}
+#bitems div .nomoney{
+    text-decoration: line-through; color: #a3a3a3;
+    font-size: 14px;
+}
+#bitems div .money{
+    color: #a3a3a3; font-size: 14px; margin-bottom: 5px;
+}
+#bitems div .sale{
+    color: red; font-weight: bold;
+    position: absolute; right: 0; bottom: 30px;
+}
+/* 인기 제품 배너 끝 */
+
+/* 푸터 구역 */
+#tfooter{
+    background-color: #f7f7f7; 
+}
+#tfooter > ul{
+    display: flex; justify-content: space-between;
+    width: 1400px; margin: 0 auto; padding: 60px 0px;
+}
+#tfooter > ul li p{
+    line-height: 22px; font-size: 14px;
+}
+#tfooter > ul li .foomargin{
+    margin-bottom: 25px;
+}
+/* 상단 푸터 끝 */
+
+#bfooter{
+    text-align: center; padding: 40px 0 50px;
+}
+#bfooter p {
+    color: #a3a3a3;
+}
+/* 하단 푸터 끝 */
+
+/* 사이드 리모콘 */
+#sidecontrol{
+    position: fixed; right: 0; top: 30%;
+}
+#sidecontrol div{
+    border: 1px solid #dbdbdb; position: relative; 
+}
+#sidecontrol div a img{
+    width: 20px; margin-top: 15px;
+}
+#sidecontrol div a{
+    display: block; width: 50px; height: 50px; background-color: #f7f7f7;
+    text-align: center;
+}
+#sidecontrol div:hover .sidecon{
+    display: inline;
+}
+#sidecontrol span{
+    position: absolute; right: 50px; top: 13px;
+    padding: 5px; background-color: black; color: white;
+    font-size: 12px; width: 70px; text-align: center; border-radius: 5px; 
+    display: none;
+}

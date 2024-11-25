@@ -1,0 +1,130 @@
+/* 테두리 */
+/* *{ border: 1px solid red; } */
+*{ padding: 0px; margin: 0px;} /* 기본 여백 제거 */
+a{ text-decoration: none; color: black; } /* a마크업 밑줄제거, 색상변경 */
+li{ list-style-type: none; } /* li 마크업은 글머리 제거 */
+
+/* 헤더 */
+#header{
+    width: 1280px; /* 가로 사이즈 */
+    margin: 10px auto 20px; /* 가로 가운데 정렬 */
+    display: flex; /* 하위 요소들의 배치 방법 */
+    flex-direction: row; /* 배치 방향 : row(기본값/생략가능) */
+    justify-content: space-between; /* 양쪽  끝에 균등 정렬 */
+    align-items: center; /* 세로 정렬 */
+}
+
+#topmenu{ display: flex; justify-content: flex-end; }
+#mainmenu{ display: flex; justify-content: flex-end; }
+
+/* 여러개 선택자 선택하기 : 선택자 , 선택자2 */
+/* 하위 선택자 선택하기 : 상위선택자 > 하위선탁자 */
+#mainmenu > li {
+    font-size: 20px; /* 글꼴 크기 */
+    font-weight: bold; /* 글꼴 굵게 */
+    margin-left: 50px; /* 왼쪽 바깥 여백 */
+    margin-top: 15px; /* 위쪽 바깥 여백 */
+}
+/* 대표 이미지 */
+#mainimg{ text-align: center; margin: 30px; }
+    /* 하위 요소들의 컨텐츠(내용물)들을 가로 가운데 정렬*/
+/* 본문 */
+#main{
+    width: 1280px; margin: 0 auto 20px;
+    display: flex;
+    justify-content: space-between;
+}
+#sidebar{ width: 250px; }
+#sidebar > h3{
+    background-color: #0ca9a2; /* 배경색상 */
+    color: white; 
+    font-size: 20px;
+    padding: 10px;
+}
+#sidebar > p{
+    line-height: 160%; /* 줄간격 : 기본값 150%;*/
+    padding: 10px;
+}
+#sidebar > div > .searchinput{
+    width: 150px; /* 입력상자 가로 사이즈 */
+    height: 30px; /* 입력상자 세로 사이즈 */
+    border-radius: 10px; /* 둥근모서리 */
+    padding: 1px 6px; /* 입력상자 안쪽 여백 */
+}
+#sidebar > div > .searchbtn{
+    /* 버튼 사이즈를 늘리는 방법 : 1. width 2. padding */
+    padding: 6px 10px; /* 안쪽 여백 */
+    margin-left: 5px;
+}
+#sidebar > h4{
+    border-top: solid 2px black; /* 위쪽 테두리 */
+    border-bottom: solid 1px #eeeeee; /* 아래쪽 테두리 */
+    padding: 10px;
+    margin-top: 10px; /* 테두리 기준으로 위쪽 바깥여백 */
+    font-size: 20px;
+}
+#sidebar > ul > li { padding: 10px 10px; } /* 안쪽 여백 */
+
+
+
+#content{ 
+    width: 1010px; display: flex;
+    justify-content: space-between;
+}
+.Cmain{
+    font-size: 20px; font-weight: bold;
+    padding-bottom: 5px; border-bottom: 2px solid black;
+    margin-bottom: 15px;
+}
+.conleft , #conright{
+    width: 500px;
+}
+.conleft{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.conleft > ul{
+    display: flex;
+    flex-direction: column;
+    
+}
+.conleft > ul li a{
+    display: flex; justify-content: space-between;
+    padding-bottom: 15px;
+}
+#게시판{
+    margin-top: 50px;
+}
+#conright > ul{
+    display: flex; flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0px 60px 0px 20px;
+}
+#conright > ul li{
+    margin-bottom: 30px;
+}
+
+#footer{
+    background-color: #05344e; color: white;
+}
+#foomom{
+    width: 1280px; margin: 0 auto;
+}
+#foomom > ul{
+    display: flex; padding: 15px 0px;
+}
+#foomom > ul li{
+    margin-right: 40px;
+
+}
+#foomom > div{
+    display: flex; justify-content: space-between;
+    padding: 20px 0px;
+}
+#foomom > div ul .foob{
+    font-size: 20px; margin-bottom: 10px;
+}
+#foomom > div ul li{
+    margin-bottom: 5px 0px;
+}

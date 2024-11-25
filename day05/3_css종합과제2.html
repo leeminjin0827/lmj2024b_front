@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel='stylesheet' href=3_css종합과제2.css>
+</head>
+<body>
+
+    <div id="wrap"> <!-- 전체 구역 -->
+        
+        <div id="header"> <!-- 헤더 구역 -->
+                 
+             <!-- 카테고리 -->
+                <span> &lt; </span>
+                <ul>
+                    <li class="click"><a href="#"> 추천메뉴 </a></li>
+                    <li><a href="#"> 커피(HOT) </a></li>
+                    <li><a href="#"> 커피(ICE) </a></li>
+                    <li><a href="#"> 스무디&프라페 </a></li>
+                </ul>
+                <span> &gt; </span>
+            
+        </div>
+
+        <div id="list"> <!-- 상품 구역 -->
+
+            <ul id="menu">
+                <li>
+                    <a href="#"><img src="./img/coffee01.jpeg">
+                        <p>(ICE)아메리카노</p>
+                        <span> 2,000원 </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><img src="./img/coffee02.jpeg">
+                        <p>(HOT)카페모카</p>
+                        <span> 4,000원 </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><img src="./img/coffee03.jpeg">
+                        <p>떠먹는 커피쿠키케이크</p>
+                        <span> 5,500원 </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><img src="./img/coffee04.jpeg">
+                        <p>(HOT)아메리카노</p>
+                        <span> 1,800원 </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><img src="./img/coffee05.jpeg">
+                        <p>(ICE)티라미수라떼</p>
+                        <span> 3,600원 </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><img src="./img/coffee06.jpeg">
+                        <p>(ICE)연유라떼</p>
+                        <span> 3,700원 </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><img src="./img/coffee07.jpeg">
+                        <p>(HOT)사과유자차</p>
+                        <span> 3,500원 </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><img src="./img/coffee08.jpeg">
+                        <p>(HOP)헤이즐넛라떼</p>
+                        <span> 3,500원 </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><img src="./img/coffee09.jpeg">
+                        <p>(HOT)유자차</p>
+                        <span> 3,000원 </span>
+                    </a>
+                </li>
+                <li class="check">
+                    <a href="#"><img src="./img/coffee10.jpeg">
+                        <p>복숭아 아이스티</p>
+                        <span> 3,000원 </span>
+                    </a>
+                </li>
+                <li class="check">
+                    <a href="#"><img src="./img/coffee11.jpeg">
+                        <p>자몽차</p>
+                        <span> 3,500원 </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><img src="./img/coffee12.jpeg">
+                        <p>(ICE)토피넛라떼</p>
+                        <span> 3,900원 </span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+
+        <div id="pay"> <!-- 결제 구역 -->
+            
+            <div id="pay_L"> <!-- 왼쪽 목록 구역 -->
+                <ul>
+                    <li class="ice">
+                        <input type="button" value="X" />
+                        <span> 복숭아 아이스티 </span>
+                        <input class="btn" type="button" value="-"/>
+                        <span>1개</span>
+                        <input class="btn" type="button" value="+" />
+                        <span class=> 3,000원 </span>
+                    </li>
+                    <li>
+                        <input type="button" value="X" />
+                        <span> 자몽차 </span>
+                        <input class="btn" type="button" value="-"/>
+                        <span>1개</span>
+                        <input class="btn" type="button" value="+" />
+                        <span class=> 3,500원 </span>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="pay_R"> <!-- 오른쪽 결제 구역 -->
+
+                <div id="tpay"> <!-- 결제 위쪽 구역 -->
+                    <div id="tpay_L">
+                        <p> 남은시간 </p>
+                        <p class="minute"> 120 </p>
+                        <p class="second"> 초 </p>
+                    </div>
+                    
+                    <div id="tpay_R">
+                        <a href="#">전체<br>삭제</a>
+                    </div>
+                </div>
+                <hr>
+                <div id="bpay"> <!-- 결제 아래쪽 구역 -->
+                    <div class="bpay_U">
+                        <p> 선택한 상품 </p>
+                        <p> <b>2</b>개 </p>
+                    </div>
+                    <div class="bpay_D">
+                        <a href="#">
+                            <span class="card"><img src="./img/card.png"></span>
+                            <span>6,500<br>결제하기</span>
+                        </a>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

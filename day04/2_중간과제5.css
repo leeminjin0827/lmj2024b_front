@@ -1,0 +1,25 @@
+div{
+    border: 1px solid #eeeeee;
+    width: 330px;
+}
+div > img{
+    width: 100%;
+}
+div .font1{
+    font-size: 20px; font-weight: 900;
+}
+div .font2{
+    font-weight: 700;
+}
+div p{
+    font-size: 14px;
+}
+div p span{
+    font-weight: 900; color: orange;
+}
+div .font4, .font5{
+    display: inline-block;
+}
+.font1, .font2, .font3, .font4{
+    padding: 0 5px 0 10px;
+}
