@@ -43,3 +43,31 @@ for( let index = 0 ; index <= nameArray.length - 1 ; index++ ){ // index는 0부
 } // for end
 // (3) 출력 , console[탭] 출력시 console.log() , HTML 출력시 document.write()
 document.write( outHTML )
+
+
+
+let sheet1 = [ '빈좌석' , '예약석' , '빈좌석' ]
+let sheet2 = [ '예약석' , '빈좌석' , '예약석' ]
+
+for( let index = 0 ; index <= sheet1.length - 1; index++ ){
+
+    let color1 = '';
+    let color2 = '';
+
+    if(sheet1[index]==='빈좌석'){
+        color1 = 'blue';
+    }
+    else {
+        color1 = 'red';
+    }
+    if(sheet2[index]==='빈좌석'){
+        color2 = 'blue';
+    }
+    else {
+        color2 = 'red';
+    }
+
+    let outHTML = `<div> <span style="color:${color1}"> ${ sheet1[index]}</span> <span style="color:${color2}"> ${ sheet2[index]} </span> </div>`
+    
+    console.log(outHTML)
+}
