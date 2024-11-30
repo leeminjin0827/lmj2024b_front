@@ -91,7 +91,7 @@ let view = 0; // 조회수 , 일반적으로 게시물 등록시 게시물 조�
 let board = `${title},${content},${password},${date},${view}`; // `백틱 문자열 템플릿
 //console.log( board );    
     // (3) 구성된 CSV문자열을 배열 저장 , .push
-게시물목록.push( board ); // console.log( 게시물목록 );
+게시물목록.push( board );  console.log( 게시물목록 );
 // 3. 출력 , 출력함수 실행 
 출력함수(); // 변수호출 : 변수명  , 함수호출 : 함수명()
 } // f end 
