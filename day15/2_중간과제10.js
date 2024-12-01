@@ -18,6 +18,32 @@
     2. 위 요구사항에 따른 메모리(변수/배열/CSV) 설계/구성
 
 */
-let 인사정보 = ["홍길동,1999.09.09,100,100",
-                "고길동,1999.10.10,80,50",
-                "이길동,1999.11.11,30,0" ]
+let lee = ["1,가가,1998"]
+let laa = ["1,87,96,2000"]
+
+function 출력함수() {
+    let tbody = document.querySelector(' table > tbody ');
+    let html = '';
+    for( let index = 0 ; index <= laa.length - 1 ; index++){
+        let nameY = lee[index];
+        let infu = nameY.split(',');
+        let yscore = laa[input];
+        let info = yscore.split(',');
+        if( infu[0] != index ){
+            html += `<tr>
+                        <td> ${ infu[1] } </td> 
+                        <td> ${ infu[2] } </td>
+                        <td> ${ info[1] } </td>
+                        <td> ${ info[2] } </td>
+                        <td> ${ info[3] } </td>
+                    </tr>`} // se end
+        else{ html +=`<tr> 
+                        <td> </td>
+                        <td> </td>
+                        <td> ${ info[1] } </td>
+                        <td> ${ info[2] } </td>
+                        <td> ${ info[3] } </td>
+                    </tr>`} // se end
+    } // for end
+    tbody.innerHTML = html;
+} // f end
