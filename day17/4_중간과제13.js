@@ -37,6 +37,7 @@ let 할일목록 = [
 ]
 
 let 식별번호 = 3;
+
 // [2] 등록함수 , ( p:x , r:x )
 function 등록함수(){ // 등록버튼을 누를 때
 
@@ -54,29 +55,30 @@ function 등록함수(){ // 등록버튼을 누를 때
     // 3. [출력]
     console.log( 할일목록 ); // 테스트/확인
     // + 부가 코드
+    
+    전체출력함수();
     alert('[할일 등록 했습니다.]');
     document.querySelector('.contentInput').value = ''; // [value수정]
-    전체출력함수();
     return;
 } // 등록함수 end
 
-전체출력함수();
+
 // [3] 전체츨력함수 , 실행조건: : 1.jd실행될떄 2.등록/수정/삭제가 성공했을떄 ( p:x , r:x )
+전체출력함수();
 function 전체출력함수(){
     // 1. 어디에 , #todoBottom , document.querySelector
     let todoBottom = document.querySelector('#todoBottom');
     // 2. 무엇을
-    let html = ''
-        for( let index = 0 ; index<=할일목록.length - 1 ; index++ ){
-            // index는 0부터 할일목록내 마지막 인덱스까지 1씩 증가 반복
+    let html = ``
+        for( let index = 0 ; index<=할일목록.length - 1 ; index++ ){ // index는 0부터 할일목록내 마지막 인덱스까지 1씩 증가 반복
             let info = 할일목록[index]; // index번쨰의 객체(할일)꺼내기
             // 객체정보를 HTML로 구성하기 , 삼항연산자를 이용한 값에 따른 class 넣기/빼기
             // 만약에 index번째의 할일객체내 할일상태가 true이면 'success' 클래스명 를 넣어주고 아니면 ''공백을 넣는다
-            html += `<div class="contentBox ${ info.할일상태 ? 'success' : '' }">
-                        <div class="content"> ${ info.할일내용 }</div>
+            html += `<div class="contentBox ${ info.할일상태 == true ? 'success' : '' }">
+                        <div class="content"> ${ info.할일내용 } </div>
                         <div class="contentBtns">
-                            <button onclick="수정함수( ${ info.할일코드 }" class="updateBtn"> 수정 </button>
-                            <button onclick="삭제함수( ${ info.할일코드 }" class="deleteBtn"> 삭제 </button>
+                            <button onclick="수정함수( ${ info.할일코드 })" class="updateBtn"> 수정 </button>
+                            <button onclick="삭제함수( ${ info.할일코드 })" class="deleteBtn"> 삭제 </button>
                         </div>
                     </div>`
         } // for end
@@ -90,32 +92,31 @@ function 수정함수( 수정할일코드 ){
 
     // 1. 배일내 수정할 요소(객체)를 찾는다.
     for( let index = 0 ; index <= 할일목록.length - 1 ; index ++ ){
-        
         if( 할일목록[index].할일코드 == 수정할일코드 ){
             // 만약에 index번째 할일객체내 할일코드가 수정할일코드와 같다면
-            할일목록[index].할일상태 = !할일목록[index].할일상태 // false -> true , true -> false
+            할일목록[index].할일상태 = !할일목록[index].할일상태 
+            // false -> true , true -> false
                 // - (1) 할일목록[index].할일상태 => true -> false
                 // - (2) !true -> false
                 // - (3) 할일목록[index].할일상태 = true -> false
-
-                breakl // 수정했다면 다음 객체 조회는 할 핑요없이  반복문 종료
+            break; // 수정했다면 다음 객체 조회는 할 핑요없이  반복문 종료
         } // if end
     } // for end
     전체출력함수();
     return;
 } // 수정함수 end
 
-// [5] 삭제함수 , [삭제]버튼 클릭시 onclick                , 매개변수 : 할일코드 / 리턴값 : x
-function 삭제함수( 삭제할일코드 ){
-    // 1. 배열내 삭제할 요소(객체)를 찾기/조회/검색 등등 <--> for
-    for( let index = 0 ; index <= 할일목록.length - 1 ; index++){
+//[5] 삭제함수 , [삭제]버튼 클릭시 onclick                     , 매개변수 : 할일코드 / 리턴값 : x 
+function 삭제함수( 삭제할일코드 ){ 
+    // 1. 배열내 삭제할 요소(객체)를 찾기/조회/검색 등등
+    for( let index = 0 ; index <= 할일목록.length-1 ; index++ ){
         if( 할일목록[index].할일코드 == 삭제할일코드 ){
-            // 만약에 index번쨰의 할일객체네 할일코드와 삭제할일코드와 같으면
-            // 2. 배열내 요소(객체) 삭제 ,  .splice( 삭제할인덱스 , 계수 ) , 인덱스 필요.
-            할일목록.splice( index , 1 ); // 현재 찾은 index 요소를 삭제한다.
-            break; // 삭제 성공했을때 [다른 객체를 조회할 필요없이] 가장 가까운 반복문 종료
-        } // if end
-    } // for end
+            // 만약에 index번째의 할일객체내 할일코드와 삭제할할일코드와 같으면 
+            // 2. 배열내 요소(객체) 삭제,  .splice( 삭제할인덱스 , 개수 ) , 인덱스 필요.
+            할일목록.splice( index , 1 ); //현재 찾은 index 요소를 삭제한다.
+            break; // 삭제 성공했을때 [다른 객체를 조회할 필요없이] 가장 가까운 반복문 종료.
+        } // if end 
+    } // for end 
     전체출력함수();
-    return;
-} // 삭제 함수 end
+    return ; 
+} // 삭제 함수 end 
