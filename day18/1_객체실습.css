@@ -1,0 +1,42 @@
+
+*{
+    margin: 0; padding: 0;
+}
+#wrap{
+    margin: 100px auto;
+    max-width: 800px;
+    min-width: 800px;
+}
+/* 달력 상단 구역 */
+#calTop{
+    display: flex; /* 하위 요소들을 배치 */
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+#calTop > button{
+    height: 30px;
+    padding: 0px 5px;
+    margin: 0px 10px;
+}
+#calTop > h6{
+    font-size: 18px;
+}
+
+/* 달력 날짜 표시 구역 */
+#calBottom{
+    display: flex; /* 하위 요소들을 배치 */
+    flex-wrap: wrap; /* 하위 요소들이 자동으로 줄바꿈 */
+}
+#calBottom > div{
+    width: 100px; /* 가로사이즈 */ /* 부모요소의 가로 사이즈 100% 의 7등분 */
+    height: 100px; /* 세로사이즈 */
+    border: 1px solid lightgray;
+}
+#calBottom > .week{
+    height: 20px; text-align: center;
+    font-weight: bold;
+}
+#calBottom > .sunday{
+    background-color: red; color: white;
+}
