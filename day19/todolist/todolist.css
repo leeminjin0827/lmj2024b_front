@@ -1,0 +1,47 @@
+#wrap{
+    width: 400px;
+    margin: 100px auto 0px;
+}
+#wrap h2{
+    text-align: center;
+}
+#todoTop{
+    display: flex;
+}
+.contentInput{
+    width : 300px; font-size: 20px; padding: 15px;
+    border: none; box-shadow: 0px 0px 10px purple;
+}
+.addBtn{
+    width : 100px; font-size: 16px; font-weight: 900;
+    border: none; box-shadow: 0px 0px 10px purple;
+}
+.contentBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0px;
+    background-color: yellow;
+    padding: 15px;
+    font-weight: 900;
+    border-radius: 999px;
+    border: none;
+    box-shadow: 0px 0px 15px purple;
+}
+.success{
+    background-color: gray;
+}
+.success > .content{
+    text-decoration: line-through;
+}
+.btnBox{
+    margin-right: 5px;
+}
+.updateBtn , .deleteBtn{
+    font-size: 16px;
+    font-weight: 900;
+    background-color: white;
+    border: 1px solid gray;
+    box-shadow: 4px 4px 4px gray;
+    border-radius: 5px;
+}

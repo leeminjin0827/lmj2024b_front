@@ -9,11 +9,6 @@ let students = [
     { sno : 3 , sName : '지아강' , Tel : '12345674444' , bir :'1998-11-30' , sDate : '2024-01-03' }
 ];
 
-
-
-
-
-
 // 클래스 등록함수
 let cCode = 4;
 function goBtn1(){
@@ -32,7 +27,7 @@ function goBtn1(){
     cCode++;
 
     console.log( subjects );
-    Print();
+    Print1();
 } // f end
 
 // 수강생 등록함수
@@ -56,30 +51,49 @@ function goBtn2(){
     sCode++;
 
     console.log( students );
-    Print();
+    Print2();
 } // f end
 
 
-// 출력함수
-Print();
-function Print(){
+// 클래스 출력함수
+Print1();
+function Print1(){
     // console.log( '출력함수 실행 ')
-    let tbody = document.querySelector('.sTbody');
+    let tbody = document.querySelector('.sTbody1');
     let html = ``;
     for( let index = 0 ; index <= subjects.length - 1 ; index++ ){
-        let info1 = subjects[index];
-        let info2 = students[index];
+        let info = subjects[index];
         html += `<tr>
-                    <td>${info2.sno}</td>
-                    <td>${info2.sName}</td>
-                    <td>${info2.Tel}</td>
-                    <td>${info2.bir}</td>
-                    <td>${info1.subName}</td>
-                    <td>${info1.subPro}</td>
-                    <td>${info1.subDate}</td>
-                    <td>${info1.cno}</td>
+                    <td>${info.cno}</td>
+                    <td>${info.subName}</td>
+                    <td>${info.subPro}</td>
+                    <td>${info.subDate}</td>
                     <td class="btn">
-                        <input onclick="byeBtn( ${ info1.cno }" type="button" value="삭제" />
+                        <input onclick="byeBtn( ${ info.cno }" type="button" value="삭제" />
+                        <input type="button" value="수정" />
+                    </td>
+                </tr>`
+    } // for end
+    tbody.innerHTML = html;
+} // f end
+
+
+// 수강생 출력함수
+Print2();
+function Print2(){
+    // console.log( '출력함수 실행 ')
+    let tbody = document.querySelector('.sTbody2');
+    let html = ``;
+    for( let index = 0 ; index <= subjects.length - 1 ; index++ ){
+        let info = students[index];
+        html += `<tr>
+                    <td>${info.sno}</td>
+                    <td>${info.sName}</td>
+                    <td>${info.Tel}</td>
+                    <td>${info.bir}</td>
+                    <td>${info.sDate}</td>
+                    <td class="btn">
+                        <input onclick="byeBtn( ${ info.cno }" type="button" value="삭제" />
                         <input type="button" value="수정" />
                     </td>
                 </tr>`
@@ -102,7 +116,8 @@ function byeBtn( cutCode ){
             break;
         } // if end
     } // for end
-    전체출력함수();
+    Print1();
+    Print2();
     return;
 } // f end
 

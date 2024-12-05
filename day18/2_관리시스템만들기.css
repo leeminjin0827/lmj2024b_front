@@ -21,10 +21,16 @@
     margin-bottom: 25px;
 }
 
-.sisBottom{
-    width: 1000px; padding: 15px 0px 25px;
+.sisBottom1{
+    width: 500px; padding: 15px; margin-bottom: 20px;
 }
-table{
+.sisBottom2{
+    width: 1000px; padding: 15px 0px 25px; margin-bottom: 50px;
+}
+.sTable1{
+    width: 600px; text-align: center;
+}
+.sTable2{
     width: 950px; text-align: center;
 }
 th,td{

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="회원제게시판.css">
+</head>
+<body>
+    
+    <form id="wrap">
+        <fieldset>
+            <legend><h1>사용자</h1></legend>
+            닉네임
+        </fieldset>
+        <fieldset>
+            <legend><h1>회원가입</h1></legend>
+            아이디 : <input class="idInput" /> <br/>
+            비밀번호 : <input class="pwInput" /> <br/>
+            닉네임 : <input class="nameInput" /> <br/>
+            <input onclick="가입함수()" type="button" value="가입">
+        </fieldset>
+        <fieldset>
+            <legend><h1>로그인</h1></legend>
+            아이디 : <input class="idOutput" /> <br/>
+            비밀번호 : <input class="pwOutput" /> <br/>
+            <input onclick="로그인함수()" type="button" value="로그인">
+        </fieldset>
+        <fieldset>
+            <legend><h1>게시물작성</h1></legend>
+            제목 : <input class="postHead" /> <br/>
+            내용 : <textarea class="postMain"></textarea> <br/>
+            <input type="button" value="등록">
+        </fieldset>
+        <fieldset>
+            <legend><h1>게시물 목록</h1></legend>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>작성일</th><th>제목</th><th>조회수</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>2024-12-05</td><td>첫번째 게시물 제목</td><td>3</td></tr>
+                    <tr><td>2024-12-04</td><td>두번째 게시물 제목</td><td>5</td></tr>
+                    <tr><td>2024-12-03</td><td>세번째 게시물 제목</td><td>7</td></tr>
+                </tbody>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend><h1>게시물 상세 페이지</h1></legend>
+            제목 : <span>게시물의 제목</span> <br/>
+            내용 : <span>게시물의 내용</span> <br/>
+            작성일/조회수 : <span>2024-11-28</span>/
+                            <span>3</span> <br/>
+            <input type="button" value="삭제">
+            <input type="button" value="수정">
+        </fieldset>
+    </form>
+
+    <script src='회원제게시판.js'></script>
+</body>
+</html>

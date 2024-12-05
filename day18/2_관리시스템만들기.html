@@ -19,6 +19,7 @@
                 <input /> <br/>
                 <input onclick="goBtn1()" type="button" value="등록" />
             </fieldset> <!-- cTop end -->
+
             <fieldset id="cBottom">
                 <legend>수강생등록</legend>
                 <span>성명</span> <br/>
@@ -33,23 +34,44 @@
                 <input class="sDate" type="date"/> <br/>
                 수강생번호 <br/>
                 <input class="sCode" /> <br/>
-                <input onclick="goBtn2()" type="button" value="등록"/>
+                <input onclick="goBtn2()" type="button" value="등록" />
             </fieldset> <!-- cBottom end -->
         </fieldset> <!-- sisTop end -->
-        <fieldset class="sisBottom">
-            <legend>수강생관리</legend> 
-                <table border="1">
+
+        <fieldset class="sisBottom1">
+            <legend>클래스관리</legend> 
+                <table class="sTable1" border="1">
                     <thead>
                         <tr>
-                            <th>수강생번호</th><th>성명</th><th>연락처</th><th>생년월일</th><th>클래스명</th><th>강사명</th><th>등록일자</th><th>클래스번호</th>
+                            <th>클래스번호</th><th>클래스명</th><th>강사명</th><th>등록일자</th>
                         </tr>
                     </thead>
-                    <tbody class="sTbody">
+                    <tbody class="sTbody1">
                         <tr>
-                            <td>1</td><td>강아지</td><td>12345678999</td><td>1998-12-10</td><td>HTML</td><td>홍길동</td><td>2024-12-04</td>
+                            <td>1</td><td>HTML</td><td>홍길동</td><td>2024-12-04</td>
                             <td>
-                                <input type="button" value="삭제"/>
-                                <input type="button" value="수정"/>
+                                <input type="button" value="삭제" />
+                                <input type="button" value="수정" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+        </fieldset> <!-- sisBottom end-->
+
+        <fieldset class="sisBottom2">
+            <legend>수강생관리</legend> 
+                <table class="sTable2" border="1">
+                    <thead>
+                        <tr>
+                            <th>수강생번호</th><th>성명</th><th>연락처</th><th>생년월일</th><th>등록일자</th>
+                        </tr>
+                    </thead>
+                    <tbody class="sTbody2">
+                        <tr>
+                            <td>1</td><td>강아지</td><td>12345678999</td><td>1998-12-10</td><td>1</td>
+                            <td>
+                                <input type="button" value="삭제" />
+                                <input type="button" value="수정" />
                             </td>
                         </tr>
                     </tbody>
