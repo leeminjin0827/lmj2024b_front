@@ -69,8 +69,8 @@ function Print1(){
                     <td>${info.subPro}</td>
                     <td>${info.subDate}</td>
                     <td class="btn">
-                        <input onclick="byeBtn( ${ info.cno }" type="button" value="삭제" />
-                        <input type="button" value="수정" />
+                        <input onclick="byeBtn( ${ info.cno })" type="button" value="삭제" />
+                        <input onclick="whatBtn( ${ info.cno })" type="button" value="수정" />
                     </td>
                 </tr>`
     } // for end
@@ -93,8 +93,8 @@ function Print2(){
                     <td>${info.bir}</td>
                     <td>${info.sDate}</td>
                     <td class="btn">
-                        <input onclick="byeBtn( ${ info.cno }" type="button" value="삭제" />
-                        <input type="button" value="수정" />
+                        <input onclick="byeBtn( ${ info.sno })" type="button" value="삭제" />
+                        <input onclick="whatBtn( ${ info.sno })" type="button" value="수정" />
                     </td>
                 </tr>`
     } // for end
@@ -110,11 +110,11 @@ function byeBtn( cutCode ){
             break;
         }else{ continue }; // if end
     } // for end
-    for( let index = 0 ; index <= subjects.length - 1 ; index ++){
+    for( let index = 0 ; index <= students.length - 1 ; index ++){
         if( students[index].sno == cutCode) {
             students.splice( index , 1 );
             break;
-        } // if end
+        }else{ continue }; // if end
     } // for end
     Print1();
     Print2();
@@ -122,6 +122,19 @@ function byeBtn( cutCode ){
 } // f end
 
 // 수정함수
-function whatBtn(){
+function whatBtn( wowCode ){
+    let subName = document.querySelector('.subName').value;
+    let subPro = document.querySelector('.subPro').value;
+    let subDate = document.querySelector('.subDate').value;
 
+    let info = {
+        subName : subName ,
+        subPro : subPro ,
+        subDate : subDate
+    }
+    for( let index = 0 ; index <= subjects.lengtg - 1 ; index++ ){
+        if( subjects[index].sno == wowCode ){
+
+        }
+    }
 } // f end
