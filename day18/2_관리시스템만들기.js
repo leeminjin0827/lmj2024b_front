@@ -44,7 +44,6 @@ function goBtn2(){
         sName : sName ,
         Tel : Tel ,
         bir : bir ,
-        sub : sub ,
         sDate : sDate
     }
     students.push( info );
@@ -69,11 +68,11 @@ function Print1(){
                     <td>${info.subPro}</td>
                     <td>${info.subDate}</td>
                     <td class="btn">
-                        <input onclick="byeBtn( ${ info.cno })" type="button" value="삭제" />
-                        <input onclick="whatBtn( ${ info.cno })" type="button" value="수정" />
+                        <input onclick="byeBtn( ${ info.cno } )" type="button" value="삭제" />
+                        <input onclick="whatBtn1( ${ info.cno } )" type="button" value="수정" />
                     </td>
                 </tr>`
-    } // for end
+    } // for end 
     tbody.innerHTML = html;
 } // f end
 
@@ -93,8 +92,8 @@ function Print2(){
                     <td>${info.bir}</td>
                     <td>${info.sDate}</td>
                     <td class="btn">
-                        <input onclick="byeBtn( ${ info.sno })" type="button" value="삭제" />
-                        <input onclick="whatBtn( ${ info.sno })" type="button" value="수정" />
+                        <input onclick="byeBtn( ${ info.sno } )" type="button" value="삭제" />
+                        <input onclick="whatBtn2( ${ info.sno } )" type="button" value="수정" />
                     </td>
                 </tr>`
     } // for end
@@ -121,20 +120,68 @@ function byeBtn( cutCode ){
     return;
 } // f end
 
-// 수정함수
-function whatBtn( wowCode ){
+//  클래스 수정함수
+function whatBtn1( wowCode ){
     let subName = document.querySelector('.subName').value;
     let subPro = document.querySelector('.subPro').value;
     let subDate = document.querySelector('.subDate').value;
+    let subCode = document.querySelector('.subCode').value;
 
     let info = {
+        // subCode : subCode ,
         subName : subName ,
         subPro : subPro ,
         subDate : subDate
     }
-    for( let index = 0 ; index <= subjects.lengtg - 1 ; index++ ){
-        if( subjects[index].sno == wowCode ){
-
+    console.log(info);
+    console.log(subjects);
+    for( let index = 0 ; index <= subjects.length - 1 ; index++ ){
+        if( subjects[index].cno == subCode == wowCode ){ 
+            console.log(wowCode);
+            console.log(subCode);
+            console.log(subjects[index].cno) ;
+            subjects[index].subName = info.subName ,
+            subjects[index].subPro = info.subPro ,
+            subjects[index].subDate = info.subDate ,
+            alert('수정완료')
+            break;
         }
     }
+    Print1();
+    return;
+} // f end
+
+//  수강생 수정함수
+function whatBtn2( wowCode2 ){
+    let sName = document.querySelector('.sName').value; console.log(sName);
+    let Tel = document.querySelector('.Tel').value; console.log(Tel);
+    let bir = document.querySelector('.bir').value; console.log(bir);
+    let sub = document.querySelector('.sub').value; console.log(sub);
+    let sDate = document.querySelector('.sDate').value; console.log(sDate);
+    let stuCode = document.querySelector('.stuCode').value; console.log(stuCode);
+
+    let info = {
+        // sno : sCode ,
+        sName : sName ,
+        Tel : Tel ,
+        bir : bir ,
+        sDate : sDate
+    }
+    console.log(info);
+    console.log(students);
+    for( let index = 0 ; index <= students.length - 1 ; index++ ){
+        if( students[index].cno == stuCode == wowCode2 ){ 
+            console.log(wowCode);
+            console.log(stuCode);
+            console.log(students[index].sno) ;
+            students[index].sName = info.sName ,
+            students[index].Tel = info.Tel ,
+            students[index].bir = info.bir ,
+            students[index].sDate = info.sDate ,
+            alert('수정완료')
+            break;
+        }
+    }
+    Print2();
+    return;
 } // f end
