@@ -26,8 +26,9 @@ function goBtn1(){
     subjects.push( info );
     cCode++;
 
-    console.log( subjects );
+    alert('등록완료')
     Print1();
+    Print2();
 } // f end
 
 // 수강생 등록함수
@@ -49,7 +50,9 @@ function goBtn2(){
     students.push( info );
     sCode++;
 
-    console.log( students );
+
+    alert('등록완료')
+    Print1();
     Print2();
 } // f end
 
@@ -68,7 +71,7 @@ function Print1(){
                     <td>${info.subPro}</td>
                     <td>${info.subDate}</td>
                     <td class="btn">
-                        <input onclick="byeBtn( ${ info.cno } )" type="button" value="삭제" />
+                        <input onclick="byeBtn1( ${ info.cno } )" type="button" value="삭제" />
                         <input onclick="whatBtn1( ${ info.cno } )" type="button" value="수정" />
                     </td>
                 </tr>`
@@ -83,7 +86,7 @@ function Print2(){
     // console.log( '출력함수 실행 ')
     let tbody = document.querySelector('.sTbody2');
     let html = ``;
-    for( let index = 0 ; index <= subjects.length - 1 ; index++ ){
+    for( let index = 0 ; index <= students.length - 1 ; index++ ){
         let info = students[index];
         html += `<tr>
                     <td>${info.sno}</td>
@@ -92,7 +95,7 @@ function Print2(){
                     <td>${info.bir}</td>
                     <td>${info.sDate}</td>
                     <td class="btn">
-                        <input onclick="byeBtn( ${ info.sno } )" type="button" value="삭제" />
+                        <input onclick="byeBtn2( ${ info.sno } )" type="button" value="삭제" />
                         <input onclick="whatBtn2( ${ info.sno } )" type="button" value="수정" />
                     </td>
                 </tr>`
@@ -100,22 +103,28 @@ function Print2(){
     tbody.innerHTML = html;
 } // f end
 
-// 삭제함수
-function byeBtn( cutCode ){
-    console.log( cutCode)
+// 클래스 삭제함수
+function byeBtn1( cutCode ){
     for( let index = 0 ; index <= subjects.length - 1 ; index ++){
         if( subjects[index].cno == cutCode) {
             subjects.splice( index , 1 );
+            alert('삭제완료')
             break;
-        }else{ continue }; // if end
+        }
     } // for end
+    Print1();
+    return;
+} // f end
+
+// 수강생 삭제함수
+function byeBtn2( cutCode ){
     for( let index = 0 ; index <= students.length - 1 ; index ++){
         if( students[index].sno == cutCode) {
             students.splice( index , 1 );
+            alert('삭제완료')
             break;
-        }else{ continue }; // if end
+        }
     } // for end
-    Print1();
     Print2();
     return;
 } // f end
@@ -128,18 +137,12 @@ function whatBtn1( wowCode ){
     let subCode = document.querySelector('.subCode').value;
 
     let info = {
-        // subCode : subCode ,
         subName : subName ,
         subPro : subPro ,
         subDate : subDate
     }
-    console.log(info);
-    console.log(subjects);
     for( let index = 0 ; index <= subjects.length - 1 ; index++ ){
-        if( subjects[index].cno == subCode == wowCode ){ 
-            console.log(wowCode);
-            console.log(subCode);
-            console.log(subjects[index].cno) ;
+        if( subjects[index].cno == subCode && subCode == wowCode ){ 
             subjects[index].subName = info.subName ,
             subjects[index].subPro = info.subPro ,
             subjects[index].subDate = info.subDate ,
@@ -152,7 +155,7 @@ function whatBtn1( wowCode ){
 } // f end
 
 //  수강생 수정함수
-function whatBtn2( wowCode2 ){
+function whatBtn2( wowCode ){
     let sName = document.querySelector('.sName').value; console.log(sName);
     let Tel = document.querySelector('.Tel').value; console.log(Tel);
     let bir = document.querySelector('.bir').value; console.log(bir);
@@ -161,19 +164,13 @@ function whatBtn2( wowCode2 ){
     let stuCode = document.querySelector('.stuCode').value; console.log(stuCode);
 
     let info = {
-        // sno : sCode ,
         sName : sName ,
         Tel : Tel ,
         bir : bir ,
         sDate : sDate
     }
-    console.log(info);
-    console.log(students);
     for( let index = 0 ; index <= students.length - 1 ; index++ ){
-        if( students[index].cno == stuCode == wowCode2 ){ 
-            console.log(wowCode);
-            console.log(stuCode);
-            console.log(students[index].sno) ;
+        if( students[index].sno == stuCode && stuCode == wowCode ){ 
             students[index].sName = info.sName ,
             students[index].Tel = info.Tel ,
             students[index].bir = info.bir ,
@@ -181,6 +178,7 @@ function whatBtn2( wowCode2 ){
             alert('수정완료')
             break;
         }
+
     }
     Print2();
     return;
